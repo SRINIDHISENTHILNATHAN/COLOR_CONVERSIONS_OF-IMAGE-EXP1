@@ -71,7 +71,7 @@ cv2.imshow('NATUREK',image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-02 091158](https://github.com/user-attachments/assets/520ea58c-0186-456d-9b9e-9e23c56bfb46)
+![image](https://github.com/user-attachments/assets/e888e1d2-ea57-47dd-8ab4-c8e09ccdbc99)
 
 ### Draw Shapes and Add Text
 (1) Draw a line from the top-left to the bottom-right of the image.
@@ -83,20 +83,20 @@ cv2.imshow('WINDOW', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-08 120658](https://github.com/user-attachments/assets/3f281a31-8d3f-4e96-959b-b373d9001383)
+![image](https://github.com/user-attachments/assets/8ccc32fb-5b7d-457a-af14-0a034cc7e591)
+
 
 2. Draw a circle at the center of the image.
 ```
 import cv2
-image = cv2.imread("naturek.jpg")
+image = cv2.imread('exp1.png')
 height, width, _ = image.shape
-center_coordinates = (width // 2, height // 2)
-res = cv2.circle(image, center_coordinates, 120, (0, 255, 0), 10)
-cv2.imshow('WINDOW', res)
+line=cv2.line(img,(0,0),(736,414),(0,0,255),10)
+cv2.imshow('CIRCLEWINDOW', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-08 120744](https://github.com/user-attachments/assets/bcbd9b85-cf3f-4feb-9cfa-24790dd1814c)
+![image](https://github.com/user-attachments/assets/566c6c6b-de85-4220-b2f6-9b79cc826b38)
 
 3.Draw a rectangle around a specific region of interest in the image.
 ```
@@ -111,38 +111,40 @@ cv2.imshow('WINDOW', res_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 085805](https://github.com/user-attachments/assets/add75b55-2ff3-446f-b7f0-f700b0ebb734)
+![image](https://github.com/user-attachments/assets/029151e5-6c91-4523-b82e-fd67f59e58c3)
+
 
 
 4.Add the text "OpenCV Drawing" at the top-left corner of the image.
 ```
 import cv2
-image = cv2.imread("naturek.jpg")
-text = "OpenCV Drawing"
+image = cv2.imread("exp1.png")
+text = "OPENCV DRAWING"
 position = (10, 50)
 font = cv2.FONT_HERSHEY_SIMPLEX
 font_scale = 1
 color = (255, 255, 255) 
 thickness = 2
-res = cv2.putText(image, text, position, font, font_scale, color, thickness, cv2.LINE_AA)
-cv2.imshow('WINDOW', res)
+res = cv2.putText(image, text, position, font, font_scale, color, thickness)
+cv2.imshow('TEXTWINDOW', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 085842](https://github.com/user-attachments/assets/95c05efb-5590-4d91-9462-8c1c44689927)
+![image](https://github.com/user-attachments/assets/8b67f116-8fa2-40fc-b843-5eedf72d1485)
+
 
 ### iii)Image Color Conversion
 (i)Convert the image from RGB to HSV and display it
 ```
 import cv2
-image = cv2.imread('naturek.jpg',1)
+image = cv2.imread('exp1.png',1)
 cv2.imshow('ORIGINAL IMAGE',image)
 hsv = cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
 cv2.imshow('RGB2HSV',hsv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 085922](https://github.com/user-attachments/assets/1cf5b4fa-78bf-4f94-941d-5b2fb7748dd4)
+![Screenshot 2024-09-09 090013](https://github.com/user-attachments/assets/c2360004-6330-4114-bba8-fd8c4aac14fc)
 
 (2) Convert the image from RGB to GRAY and display it.
 
@@ -155,7 +157,7 @@ cv2.imshow('RGB2GRAY',gray)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090013](https://github.com/user-attachments/assets/c2360004-6330-4114-bba8-fd8c4aac14fc)
+
 
 
 (3) Convert the image from RGB to YCrCb and display it.
@@ -168,7 +170,8 @@ cv2.imshow('RGB-2-YCrCb',YCrCb)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090053](https://github.com/user-attachments/assets/f519b75b-8777-4709-aef0-237cf690b5e6)
+![image](https://github.com/user-attachments/assets/bf7123b8-5a34-4de5-a5a0-715bf3ad9494)
+
 
 (4) Convert the HSV image back to RGB and display it.
 ```
@@ -180,7 +183,8 @@ cv2.imshow('HSV2RGB',RGB)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090132](https://github.com/user-attachments/assets/6e818c27-966e-46e0-a1b3-52887d8010ef)
+![image](https://github.com/user-attachments/assets/83f8eb65-d32f-4aec-9aed-362ad829622d)
+
 
 ### iv)Access and Manipulate Image Pixels
 (1) Access and print the value of the pixel at coordinates (100, 100)
@@ -188,37 +192,36 @@ cv2.destroyAllWindows()
 pixel_value = image[100, 100]
 print(f"Pixel value at (100, 100): {pixel_value}")
 ```
-![Screenshot 2024-09-09 090158](https://github.com/user-attachments/assets/53fb2f1a-8e20-4b3b-bdeb-cf314f0326fd)
+![image](https://github.com/user-attachments/assets/c6e95952-6b38-400b-b1ab-3a4827c44360)
 
 (2) Modify the color of the pixel at (200, 200) to white
 ```
 import cv2
-image = cv2.imread('naturek.jpg',1)
+image = cv2.imread('exp1.png',1)
 cv2.imshow('ORIGINAL IMAGE',image)
 image[200, 200] = [255, 255, 255] 
 cv2.imshow('MODIFIED IMAGE', image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090237](https://github.com/user-attachments/assets/da0721e2-3301-43c2-9f66-e6974f3a4698)
+![image](https://github.com/user-attachments/assets/bfd454d3-d7ad-4abe-b3ca-1a8f76c4c242)
 
 ### v)Image Resizing:
 Resize the original image to half its size and display it.
 ```
 cv2.imshow('ORIGINAL IMAGE',image)
-resized_image = cv2.resize(image, (image.shape[1] // 2, image.shape[0] // 2))
+resized_image = cv2.resize(image, (350,200))
 cv2.imshow('RESIZED IMAGE', resized_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090318](https://github.com/user-attachments/assets/60fbc978-3772-4249-9148-9c5486c4599e)
-![Screenshot 2024-09-09 090331](https://github.com/user-attachments/assets/3ed7632c-9359-45e6-9aef-3fce7858cc4e)
+![image](https://github.com/user-attachments/assets/1d5f7477-7d3a-45bd-aa7a-3459824109ec)
 
 ### vi)Image Cropping
 Crop a region of interest (ROI) from the image (e.g., a 100x100 pixel area starting at (50, 50)) and display it.
 ```
 import cv2
-image = cv2.imread('naturek.jpg',1)
+image = cv2.imread('exp1.png',1)
 image = cv2.resize(image,(400,300))
 x, y = 50, 50
 width, height = 100, 100
@@ -227,7 +230,8 @@ cv2.imshow('CROPPED IMAGE', roi)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090407](https://github.com/user-attachments/assets/6a1d03bb-0c93-4207-941b-96ea80360a07)
+![image](https://github.com/user-attachments/assets/440b3022-4b94-4ef7-ab26-55e1c12b4c55)
+
 ### vii)Image Flipping:
 (1) Flip the original image horizontally and display it.
 ```
@@ -240,21 +244,23 @@ cv2.imshow('FLIPPED IMAGE', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+![image](https://github.com/user-attachments/assets/da6fbefa-2ff0-4f5b-9007-8b674484f342)
+
 ![Screenshot 2024-09-09 090449](https://github.com/user-attachments/assets/747a0eff-266f-494d-862c-be8548fd88d8)
 
 (2) Flip the original image vertically and display it.
 ```
 import cv2
-image = cv2.imread("naturek.jpg")
-image = cv2.resize(image,(300,200))
+image = cv2.imread('exp1.png')
 res=cv2.rotate(image,cv2.ROTATE_90_CLOCKWISE)
 cv2.imshow('ORIGINAL IMAGE',image)
 cv2.imshow('FLIPPED IMAGE', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090532](https://github.com/user-attachments/assets/f4d998f1-00a1-4fc5-90e1-918d8c793018)
-![Screenshot 2024-09-09 090552](https://github.com/user-attachments/assets/fa353d26-4e1d-4117-8fa6-045c6cd24447)
+![image](https://github.com/user-attachments/assets/567b6c86-382d-4bef-b871-d7fc4c0b2af4)
+
+![image](https://github.com/user-attachments/assets/06f4429b-5f28-438a-b848-ec1b3351a4ba)
 
 ### viii)Write and Save the Modified Image
 Save the final modified image to your local directory.
