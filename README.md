@@ -65,11 +65,16 @@ Save the final modified image to your local directory.
 ### 1. Read and display the image
 i.Load an image from your local directory and display it.
 ```
+!pip install opencv-python
+!pip install matplotlib
 import cv2
-image=cv2.imread('naturek.jpg',1)
-cv2.imshow('NATUREK',image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+import matplotlib.pyplot as plt
+img=cv2.imread('exp1.png')
+cv2.imshow('Image Window', img)
+plt.imshow(img)
+plt.axis('off')
+plt.show()
+
 ```
 ![image](https://github.com/user-attachments/assets/e888e1d2-ea57-47dd-8ab4-c8e09ccdbc99)
 
@@ -77,13 +82,15 @@ cv2.destroyAllWindows()
 (1) Draw a line from the top-left to the bottom-right of the image.
 ```
 import cv2
-image = cv2.imread("naturek.jpg")
+image = cv2.imread('exp1.png')
 res = cv2.line(image, (0, 0), (image.shape[1], image.shape[0]), (255,0,0), 10)
-cv2.imshow('WINDOW', res)
+cv2.imshow('LINWINDOW', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
 ```
-![image](https://github.com/user-attachments/assets/8ccc32fb-5b7d-457a-af14-0a034cc7e591)
+![image](https://github.com/user-attachments/assets/e26f8a91-3d18-4f65-a1bb-17ee911adf3f)
 
 
 2. Draw a circle at the center of the image.
@@ -144,13 +151,15 @@ cv2.imshow('RGB2HSV',hsv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Screenshot 2024-09-09 090013](https://github.com/user-attachments/assets/c2360004-6330-4114-bba8-fd8c4aac14fc)
+![image](https://github.com/user-attachments/assets/531c6977-23c0-4b21-8e47-63b288ccde92)
+
+
 
 (2) Convert the image from RGB to GRAY and display it.
 
 ```
 import cv2
-image = cv2.imread('naturek.jpg',1)
+image = cv2.imread('exp1.png',1)
 cv2.imshow('ORIGINAL IMAGE',image)
 gray = cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
 cv2.imshow('RGB2GRAY',gray)
@@ -158,32 +167,33 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
+![image](https://github.com/user-attachments/assets/bf7123b8-5a34-4de5-a5a0-715bf3ad9494)
+
 
 
 (3) Convert the image from RGB to YCrCb and display it.
-```
-import cv2
-image = cv2.imread('naturek.jpg',1)
+```import cv2
+image = cv2.imread('exp1.png',1)
 cv2.imshow('ORIGINAL IMAGE',image)
 YCrCb = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
 cv2.imshow('RGB-2-YCrCb',YCrCb)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![image](https://github.com/user-attachments/assets/bf7123b8-5a34-4de5-a5a0-715bf3ad9494)
+![image](https://github.com/user-attachments/assets/23dec97e-d27b-4fef-9b48-f5844f265731)
 
 
 (4) Convert the HSV image back to RGB and display it.
 ```
 import cv2
-image = cv2.imread('naturek.jpg',1)
+image = cv2.imread('exp1.png',1)
 cv2.imshow('ORIGINAL IMAGE',image)
 RGB = cv2.cvtColor(image,cv2.COLOR_HSV2BGR)
 cv2.imshow('HSV2RGB',RGB)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![image](https://github.com/user-attachments/assets/83f8eb65-d32f-4aec-9aed-362ad829622d)
+![image](https://github.com/user-attachments/assets/f890e799-7128-46f7-9940-19e8dbc82091)
 
 
 ### iv)Access and Manipulate Image Pixels
@@ -244,9 +254,8 @@ cv2.imshow('FLIPPED IMAGE', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![image](https://github.com/user-attachments/assets/da6fbefa-2ff0-4f5b-9007-8b674484f342)
+![image](https://github.com/user-attachments/assets/567b6c86-382d-4bef-b871-d7fc4c0b2af4)
 
-![Screenshot 2024-09-09 090449](https://github.com/user-attachments/assets/747a0eff-266f-494d-862c-be8548fd88d8)
 
 (2) Flip the original image vertically and display it.
 ```
@@ -258,19 +267,20 @@ cv2.imshow('FLIPPED IMAGE', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![image](https://github.com/user-attachments/assets/567b6c86-382d-4bef-b871-d7fc4c0b2af4)
+![image](https://github.com/user-attachments/assets/da6fbefa-2ff0-4f5b-9007-8b674484f342)
 
-![image](https://github.com/user-attachments/assets/06f4429b-5f28-438a-b848-ec1b3351a4ba)
+
 
 ### viii)Write and Save the Modified Image
 Save the final modified image to your local directory.
 ```
 import cv2
-img = cv2.imread("naturek.jpg")
+img = cv2.imread('exp1.png')
 img = cv2.resize(img,(300,200))
 cv2.imwrite('nature_pic.jpg',img)
 ```
-![Screenshot 2024-09-09 090632](https://github.com/user-attachments/assets/874121bf-a1c9-4fb9-be27-e4613309ad2d)
+![image](https://github.com/user-attachments/assets/0c3fa123-2c60-4789-9c11-4f2f50387486)
+
 
 ## Result:
 
